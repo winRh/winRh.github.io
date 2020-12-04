@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>winrh</title>
+</head>
+<body>
+开始定位
+<script src="coordtransform.js"></script>
+<script>
+var latitude;
+var longitude;
+window.onload = getLocation;
+function getLocation()
+  {
+  if (navigator.geolocation)
+    {
+    navigator.geolocation.getCurrentPosition(showPosition,showError);
+    }
+  else{alert("Geolocation is not supported by this browser.");}
+  }
+function showPosition(position)
+  {
+  latitude = position.coords.latitude;
+  longitude = position.coords.longitude;
+  
+	  //wgs84转国测局坐标
+	var wgs84togcj02 = coordtransform.wgs84togcj02(longitude, latitude);
+	//国测局坐标转百度经纬度坐标
+	var gcj02tobd09 = coordtransform.gcj02tobd09(wgs84togcj02[0], wgs84togcj02[1]);
+	//alert(gcj02tobd09);//很准
+	console.log("经度是："+gcj02tobd09[1]+"，纬度是："+gcj02tobd09[0]);
+  }
+function showError(error)
+  {
+  switch(error.code) 
+    {
+    case error.PERMISSION_DENIED:
+      alert("User denied the request for Geolocation.")
+      break;
+    case error.POSITION_UNAVAILABLE:
+      alert("Location information is unavailable.")
+      break;
+    case error.TIMEOUT:
+      alert("The request to get user location timed out.")
+      break;
+    case error.UNKNOWN_ERROR:
+      alert("An unknown error occurred.")
+      break;
+    }
+  }
+</script>
+</body>
+</html>
+
