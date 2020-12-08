@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>接口云</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <script type="text/javascript" src="../js/tagcloud.js"></script>
+    <style type="text/css">.fl {
+        float: left;
+    }
+
+    .fr {
+        float: right;
+    }
+
+    .wrapper {
+        width: 1200px;
+        height: 300px;
+        margin: 0 auto;
+    }
+
+    .wrapper p {
+        padding-top: 150px;
+        line-height: 27px;
+        color: #999;
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .tagcloud {
+        position: relative;
+        margin-top: -150px;
+    }
+
+    .tagcloud a {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        padding: 11px 30px;
+        color: #333;
+        font-size: 16px;
+        border: 1px solid #e6e7e8;
+        border-radius: 18px;
+        background-color: #f2f4f8;
+        text-decoration: none;
+        white-space: nowrap;
+        -o-box-shadow: 6px 4px 8px 0 rgba(151, 142, 136, .34);
+        -ms-box-shadow: 6px 4px 8px 0 rgba(151, 142, 136, .34);
+        -moz-box-shadow: 6px 4px 8px 0 rgba(151, 142, 136, .34);
+        -webkit-box-shadow: 6px 4px 8px 0 rgba(151, 142, 136, .34);
+        box-shadow: 6px 4px 8px 0 rgba(151, 142, 136, .34);
+        -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4,Direction=135, Color='#000000')"; /*兼容ie7/8*/
+        filter: progid:DXImageTransform.Microsoft.Shadow(color='#969696', Direction=125, Strength=9); /*strength是阴影大小，direction是阴影方位，单位为度，可以为负数，color是阴影颜色 （尽量使用数字）使用IE滤镜实现盒子阴影的盒子必须是行元素或以行元素显示（block或inline-block;）*/
+    }
+
+    .tagcloud a:hover {
+        color: #3385cf;
+    }</style>
+</head>
+<body>
+<div class="wrapper">
+    <div class="tagcloud fl" style="margin-top: 30%;visibility: visible; position: relative; min-height: 240px; min-width: 500px;">
+        <a
+                href="https://winrh.github.io/blog/api/calculate/addNum.html?a=10&b=20"
+                style="left: 80.5237px; top: 49.9895px; z-index: 2; font-size: 12px; opacity: 0.519128; position: absolute;">求和</a>
+        <a
+                href="https://winrh.github.io/blog/api/location/get.html"
+                style="left: 61.3149px; top: 36.6402px; z-index: 9; font-size: 13px; opacity: 1.56563; position: absolute;">定位</a>
+        <a
+                href="https://winrh.github.io/blog/api/calendar/get.html"
+                style="left: 61.3149px; top: 36.6402px; z-index: 9; font-size: 13px; opacity: 1.56563; position: absolute;">日历</a>
+    </div>
+</div><!--wrapper-->
+<script type="text/javascript">/*3D标签云*/
+tagcloud({
+    selector: ".tagcloud",  /*元素选择器*/
+    fontsize: 16,       /*基本字体大小, 单位px*/
+    radius: 100,         /*滚动半径, 单位px*/
+    mspeed: "normal",   /*滚动最大速度, 取值: slow, normal(默认), fast*/
+    ispeed: "normal",   /*滚动初速度, 取值: slow, normal(默认), fast*/
+    direction: 135,     /*初始滚动方向, 取值角度(顺时针360): 0对应top, 90对应left, 135对应right-bottom(默认)...*/
+    keep: false          /*鼠标移出组件后是否继续随鼠标滚动, 取值: false, true(默认) 对应 减速至初速度滚动, 随鼠标滚动*/
+});</script>
+</body>
+</html>
