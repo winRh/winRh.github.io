@@ -1,0 +1,77 @@
+.col-md-7-1 {
+	min-height: 1px;
+	padding: 3px 0;
+	width: 14.2%;
+	float: left;
+	font-size: 15px;
+}
+
+/*农历日*/
+.lunar {
+	color: #999;
+	transform:scale(0.8);
+}
+
+.weekend {
+	color: #ccc;
+}
+
+.days {
+	/*height: 222px;*/
+}
+
+/*顶部标题*/
+.title {
+	padding: 1px 0;
+
+}
+
+/*for print*/
+@media print {
+	/*grid width*/
+	.col-xs-12 {
+		width: 33%;
+/*		padding-left: 10px;
+		padding-right: 10px;
+*/	}
+	/*item padding of height*/
+	.col-md-7-1 {
+		/*font-size: 12px;*/
+		padding: 3px 0;
+	}
+
+	.col-md-7-1 div {
+		line-height: 18px;
+	}
+
+	.solar {
+		/*transform:scale(0.9);*/
+	}
+
+	.lunar {
+		/*transform:scale(0.7);*/
+	}
+
+	/*面板本身*/
+	.panel {
+		/*margin-bottom: 10px;*/
+	}
+
+	/*面板头部*/
+	.panel-heading {
+/*		padding-top: 5px;
+		padding-bottom: 5px;
+*/	}
+
+	/*面板主体内容*/
+	.panel-body {
+/*		padding-top: 8px;
+		padding-bottom: 8px;
+*/	}
+
+	h2 {
+		/*margin-top: 5px;*/
+	}
+}
+
+	
