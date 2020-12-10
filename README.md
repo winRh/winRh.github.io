@@ -14,3 +14,7 @@ API接口展示页面: https://winrh.github.io/blog/api/api.html
 
 ### <font color=#00CED1 size=16 face="黑体">3. 日历</font>
 查询2021年日历。例如https://winrh.github.io/blog/api/calendar/index.html
+
+
+### <font color=#00CED1 size=16 face="黑体">4. 美化Json</font>
+美化Json。例如https://winrh.github.io/blog/api/json/beautyJson.html
