@@ -25,7 +25,7 @@ const token = {
             UserApi.verifyToken(accessToken).then((response) => {
                 let result = response.data
                 let githubUsername = store.state.configuration.githubUsername
-                if (githubUsername == result['login']) {
+                if (githubUsername.toLowerCase() === result['login'].toLowerCase()) {
                     commit('SET_TOKEN', accessToken)
                     Vue.prototype.$notify({
                         title: '成功',
@@ -38,7 +38,7 @@ const token = {
                     // })
                 } else {
                     Vue.prototype.$message({
-                        message: 'Token用户不一致',
+                        message: 'Token用户不一致啊',
                         type: 'error'
                     })
                 }
