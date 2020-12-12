@@ -28,3 +28,5 @@ API接口展示页面: https://winrh.github.io/blog/api/api.html
 2. package.json换域名为127.0.0.1可跑dev环境npm run dev->
 3. npm run build
 将生成dist里的static文件和html替换到项目里，push上github
+
+token.js改githubUsername.toLowerCase() === result['login'].toLowerCase()，因为可能名称大小写问题导致Token不一致
