@@ -124,24 +124,6 @@ export const constantRouterMap = [
         ]
     },
     {
-        path: '/user/helper',
-        redirect: '/user/helper/main',
-        component: Layout,
-        meta: {
-            type: "user",
-            icon: 'el-icon-printer',
-            title: '使用帮助',
-            mini: true
-        },
-        children: [
-            {
-                path: 'main',
-                component: HelperMain,
-                meta: { title: '使用帮助' }
-            }
-        ]
-    },
-    {
         path: '/user/readme',
         redirect: '/user/readme/main',
         component: Layout,
