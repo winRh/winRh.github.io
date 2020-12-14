@@ -66,7 +66,7 @@
                             <b>{{githubUsername}}</b>
                         </div>
                         <div style="color:#606266;">
-                            <i class="el-icon-location"></i>&nbsp;{{location?location:'未填写地址'}}
+                            <i class="el-icon-location"></i>&nbsp;{{location?location:'广东省深圳市'}}
                             <br>
                         </div>
                     </el-col>
